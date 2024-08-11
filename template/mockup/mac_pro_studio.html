@@ -1,0 +1,25 @@
+{% load static %}
+<section class="section single-block block-device block_0  " style="background-color: {{mockup.background_color}};"
+   data-scroll-section>
+   <div class="container">
+      <div class="row device-macprohigher">
+         <div class="flex-col">
+            <div class="device">
+               <div class="single-image">
+
+                  <div class="overlay overlay-image playpauze"><video class="overlay"
+                        src="{{mockup.main_file.url}}"
+                        loop muted playsinline></video></div>
+
+               </div>
+
+               <div class="overlay-device-image">
+                  <div class="overlay overlay-device"
+                     style="background: url({% static 'mockup/device-macpro-higher.png' %}) center center no-repeat; background-size: cover;">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

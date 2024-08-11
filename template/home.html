@@ -1,0 +1,249 @@
+{%extends "base.html"%}
+{% load static %}
+{% block title %}Saif Wahabi{%endblock%}
+{% block content %}
+    
+        <header class="section home-header theme-dark" data-scroll-section>
+            <div class="overlay personal-image no-select once-in" data-scroll data-scroll-speed="-3"
+                data-scroll-position="top">
+                <img src="{% static 'img/hero.PNG'%}" />
+            </div>
+            <div class="overlay get-height once-in once-in-secondary">
+                <div class="hanger">
+                    <p><span>Located </span><span>in </span><span>{{data.location}}</span></p>
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg width="300px" height="121px" viewBox="0 0 300 121" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>Combined Shape</title>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Artboard" transform="translate(0.000000, -366.000000)" fill="#1C1D20">
+                                <g id="Group"
+                                    transform="translate(149.816828, 426.633657) rotate(90.000000) translate(-149.816828, -426.633657) translate(89.816828, 276.816828)">
+                                    <g id="Hanger"
+                                        transform="translate(60.000000, 149.816828) rotate(-90.000000) translate(-60.000000, -149.816828) translate(-89.816828, 89.816828)">
+                                        <path
+                                            d="M239.633657,0 C272.770742,1.0182436e-15 299.633657,26.862915 299.633657,60 C299.633657,93.137085 272.770742,120 239.633657,120 L0,120 L0,0 L239.633657,0 Z M239.633657,18.7755102 C216.866,18.7755102 198.409167,37.232343 198.409167,60 C198.409167,82.767657 216.866,101.22449 239.633657,101.22449 C262.401314,101.22449 280.858147,82.767657 280.858147,60 C280.858147,37.232343 262.401314,18.7755102 239.633657,18.7755102 Z"
+                                            id="Combined-Shape"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="digital-ball">
+                        <div class="overlay"></div>
+                        <div class="globe">
+                            <div class="globe-wrap">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle-hor"></div>
+                                <div class="circle-hor-middle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include 'components/navbar.html' %} 
+            <div class="container once-in once-in-secondary">
+                <div class="row">
+                    <div class="flex-col">
+                        <div class="header-above-h4" data-scroll data-scroll-speed="1">
+                            <div class="arrow big">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>arrow-up-right</title>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Artboard" transform="translate(-1019.000000, -279.000000)"
+                                            stroke="#FFFFFF" stroke-width="1.5">
+                                            <g id="arrow-up-right"
+                                                transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)">
+                                                <polyline id="Path" points="2.76923077 0 12 0 12 9.23076923">
+                                                </polyline>
+                                                <line x1="12" y1="0" x2="0" y2="12" id="Path"></line>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <h4><span>{{data.work_1}}</span> {{data.work_2}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="big-name">
+                <div class="name-h1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4"
+                    data-scroll-position="top">
+                    <div class="name-wrap">
+                        <h1 class="no-select once-in once-in-secondary">{{data.first_name}} {{data.last_name}}<span
+                                class="spacer">—</span></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="white-block"></div>
+        </header>
+        <section class="section home-intro" data-scroll-section>
+            <div class="container medium">
+                <div class="row">
+                    <div class="flex-col">
+                        <h4 class="span-lines animate">{{data.desc_1}}</h4>
+                    </div>
+                    <div class="flex-col">
+                        <div class="text-wrap fade-in animate">
+                            <p>{{data.desc_2}}</p>
+                        </div>
+                        <div class="btn btn-round" data-scroll data-scroll-speed="2">
+                            <a href="{% url 'about' %}" class="btn-click magnetic "
+                                data-strength="100" data-strength-text="50">
+                                <div class="btn-fill"></div>
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">About me</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section work-grid large-work-grid" data-scroll-section>
+            <div class="container">
+                <div class="grid-sub-title">
+                    <div class="flex-col">
+                        <h5>Recent work</h5>
+                    </div>
+                    <!-- <div class="flex-col">
+        <h5>Services</h5>
+     </div> -->
+                </div>
+                <ul class="work-items mouse-pos-list-image-wrap">
+                    {% for project in projects %}
+                        <li class="development interaction visible">
+                            <div class="stripe animate"></div>
+                            <a href="{% url 'project' project %}" class="row">
+                                <div class="flex-col">
+                                    <h4><span>{{project.name}}</span></h4>
+                                </div>
+                                <div class="flex-col animate">
+                                    <p>{{project.category}}</p>
+                                </div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                    <div class="stripe last animate"></div>
+                </ul>
+            </div>
+        </section>
+        <section class="section work-tiles work-tiles-home" data-scroll-section>
+            <div class="container">
+                <ul>
+                    {% for project in projects %}
+                        <li class="development interaction visible">
+                            <div class="single-tile-wrap">
+                                <a href="{% url 'project' project %}" class="row">
+                                    <div class="flex-col">
+                                        <div class="tile-image">
+                                            <div class="overlay overlay-image lazy"
+                                                style="background-color: #F1F1F1; background-position: center center; background-repeat: no-repeat; background-size: cover;"
+                                                data-bg="{{project.image.url}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-col">
+                                        <h4><span>{{project.name}}</span></h4>
+                                        <div class="stripe"></div>
+                                    </div>
+                                    <div class="flex-col">
+                                        <p>{{project.category}}</p>
+                                    </div>
+                                    <div class="flex-col">
+                                        <p>{{project.year}}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        <section class="section center-grid-btn center-grid-btn-home" data-scroll-section>
+            <div class="container">
+                <div class="grid-after-btn">
+                    <div class="btn btn-normal">
+                        <a href="{% url 'work' %}" class="btn-click magnetic" data-strength="25"
+                            data-strength-text="15">
+                            <div class="btn-fill"></div>
+                            <span class="btn-text">
+                                <span class="btn-text-inner change">More work<div class="count-nr">{{project_number}}</div></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section horizontal-items" data-scroll-section>
+            <div class="container">
+                <div class="row row-1" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+                    <div class="flex-col">
+                        <div class="horizontal-single-item">
+                            <div class="overlay lazy"
+                                style="background-position: center center; background-repeat: no-repeat; background-size: cover;"
+                                data-bg="{{data.horizontal_items_1.url}}"></div>
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="horizontal-single-item">
+                            <div class="overlay playpauze"><video class="overlay lazy"
+                                    src="{{data.horizontal_items_2.url}}" loop muted
+                                    playsinline></video></div>
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="horizontal-single-item">
+                            <div class="overlay lazy"
+                                style="background-position: center center; background-repeat: no-repeat; background-size: cover;"
+                                data-bg="{{data.horizontal_items_3.url}}"></div>
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="horizontal-single-item">
+                            <div class="overlay playpauze"><video class="overlay lazy"
+                                    src="{{data.horizontal_items_4.url}}" loop muted
+                                    playsinline></video></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-2" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+                    <div class="flex-col">
+                        <div class="horizontal-single-item">
+                            <div class="overlay playpauze"><video class="overlay lazy"
+                                    src="{{data.horizontal_items_5.url}}" loop muted
+                                    playsinline></video></div>
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="horizontal-single-item">
+                            <div class="overlay lazy"
+                                style="background-position: center center; background-repeat: no-repeat; background-size: cover;"
+                                data-bg="{{data.horizontal_items_6.url}}"></div>
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="horizontal-single-item">
+                            <div class="overlay playpauze"><video class="overlay lazy"
+                                    src="{{data.horizontal_items_7.url}}" loop muted
+                                    playsinline></video></div>
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="horizontal-single-item">
+                            <div class="overlay lazy"
+                                style="background-position: center center; background-repeat: no-repeat; background-size: cover;"
+                                data-bg="{{data.horizontal_items_8.url}}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% include "components/footer.html" %}
+
+{%endblock%}

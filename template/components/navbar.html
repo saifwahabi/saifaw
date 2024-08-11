@@ -1,0 +1,141 @@
+{% if page == "home" %}
+
+<div class="nav-bar">
+    <div class="credits-top">
+        <div class="btn btn-link btn-left-top">
+            <a href="{% url 'home' %}" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                <span class="btn-text">
+                    <div class="credit"><span>©</span></div>
+                    <div class="cbd">
+                        <span class="code-by">Code by </span>
+                        <span class="dennis">
+                            <span class="dennis-span">{{data.middle_name}}</span>
+                            <span class="snellenberg">{{data.last_name}}</span>
+                        </span>
+                    </div>
+                </span>
+            </a>
+        </div>
+    </div>
+    <ul class="links-wrap">
+        <li class="btn btn-link">
+            <a href="{% url 'work' %}" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                <span class="btn-text">
+                    <span class="btn-text-inner">Work</span>
+                </span>
+            </a>
+        </li>
+        <li class="btn btn-link">
+            <a href="{% url 'about' %}" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                <span class="btn-text">
+                    <span class="btn-text-inner">About</span>
+                </span>
+            </a>
+        </li>
+        <li class="btn btn-link">
+            <a href="{% url 'contact' %}" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                <span class="btn-text">
+                    <span class="btn-text-inner">Contact</span>
+                </span>
+            </a>
+        </li>
+        <li class="btn btn-link btn-menu">
+            <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                <div class="btn-text">
+                    <span class="btn-text-inner">Menu</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+{% else %}
+
+<div class="nav-bar">
+    <div class="credits-top">
+       <div class="btn btn-link btn-left-top">
+          <a href="{% url 'home' %}" class="btn-click magnetic" data-strength="20"
+             data-strength-text="10">
+             <span class="btn-text">
+                <div class="credit"><span>©</span></div>
+                <div class="cbd"><span class="code-by">Code by </span><span class="dennis"><span
+                         class="dennis-span">{{data.middle_name}}</span> <span
+                         class="snellenberg">{{data.last_name}}</span></span>
+             </span>
+       </div>
+       </span>
+       </a>
+    </div>
+ </div>
+ <ul class="links-wrap">
+    {% if page == "work" %}
+        <li class="btn btn-link active">
+        <a href="{% url 'work' %}" class="btn-click magnetic" data-strength="20"
+            data-strength-text="10">
+            <span class="btn-text">
+                <span class="btn-text-inner">Work</span>
+            </span>
+        </a>
+        </li>
+    {% else %}
+        <li class="btn btn-link">
+        <a href="{% url 'work' %}" class="btn-click magnetic" data-strength="20"
+            data-strength-text="10">
+            <span class="btn-text">
+                <span class="btn-text-inner">Work</span>
+            </span>
+        </a>
+        </li>
+    {% endif %}
+
+    {% if page == "about" %}
+        <li class="btn btn-link active">
+        <a href="{% url 'about' %}" class="btn-click magnetic" data-strength="20"
+            data-strength-text="10">
+            <span class="btn-text">
+                <span class="btn-text-inner">About</span>
+            </span>
+        </a>
+        </li>
+    {% else %}
+        <li class="btn btn-link">
+        <a href="{% url 'about' %}" class="btn-click magnetic" data-strength="20"
+            data-strength-text="10">
+            <span class="btn-text">
+                <span class="btn-text-inner">About</span>
+            </span>
+        </a>
+        </li>
+    {% endif %}
+
+    {% if page == "contact" %}
+        <li class="btn btn-link active">
+        <a href="{% url 'contact' %}" class="btn-click magnetic" data-strength="20"
+            data-strength-text="10">
+            <span class="btn-text">
+                <span class="btn-text-inner">Contact</span>
+            </span>
+        </a>
+        </li>
+    {% else %}
+        <li class="btn btn-link">
+        <a href="{% url 'contact' %}" class="btn-click magnetic" data-strength="20"
+            data-strength-text="10">
+            <span class="btn-text">
+                <span class="btn-text-inner">Contact</span>
+            </span>
+        </a>
+        </li>
+    {% endif %}
+
+
+    <li class="btn btn-link btn-menu">
+       <div class="btn-click magnetic" data-strength="20" data-strength-text="10">
+          <div class="btn-text">
+             <span class="btn-text-inner">Menu</span>
+          </div>
+       </div>
+    </li>
+ </ul>
+
+{% endif %}

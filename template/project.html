@@ -1,0 +1,223 @@
+{%extends "base.html"%}
+{% load static %}
+{% block title %} {{project}} {%endblock%}
+{% block content %}
+    
+<header class="section default-header work-header" data-scroll-section>
+    {% include "components/navbar.html" %}
+</div>
+    <div class="container medium">
+       <div class="row">
+          <div class="flex-col once-in">
+             <h1><span>{{project}}</h1>
+          </div>
+       </div>
+    </div>
+
+ </header>
+ <section class="section case-intro once-in" data-scroll-section>
+   <div class="container medium">
+      <div class="row">
+         <div class="flex-col">
+            <h5>Role / Services</h5>
+            <div class="stripe"></div>
+            <li>
+               <p>{{project_data.category}}</p>
+            </li>
+         </div>
+         <div class="flex-col">
+            <h5>Credits</h5>
+            <div class="stripe"></div>
+            <li>
+               <p>{{project_data.branding}}</p>
+            </li>
+         </div>
+         <div class="flex-col">
+            <h5>Location & year</h5>
+            <div class="stripe"></div>
+            <li>
+               <p>{{project_data.location}} ©</p>
+            </li>
+            <li>
+               <p>{{project_data.year}}</p>
+            </li>
+         </div>
+      </div>
+   </div>
+</section>
+<section class="section case-intro-image once-in block-padding-bottom " data-scroll-section>
+   <div class="container">
+      <div class="row">
+         <div class="flex-col">
+            <div class="btn-wrap theme-dark">
+               <div class="btn btn-round" data-scroll data-scroll-speed="2" data-scroll-position="top">
+                  <a href="{{project_data.url_project}}" target="_blank" class="btn-click magnetic "
+                     data-strength="100" data-strength-text="50">
+                     
+                     <div class="btn-fill"></div>
+                     <span class="btn-text">
+                        <span class="btn-text-inner">Live site <div class="arrow">
+                              <?xml version="1.0" encoding="UTF-8"?>
+                              <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <title>arrow-up-right</title>
+                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Artboard" transform="translate(-1019.000000, -279.000000)"
+                                       stroke="#FFFFFF" stroke-width="1.5">
+                                       <g id="arrow-up-right"
+                                          transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)">
+                                          <polyline id="Path" points="2.76923077 0 12 0 12 9.23076923"></polyline>
+                                          <line x1="12" y1="0" x2="0" y2="12" id="Path"></line>
+                                       </g>
+                                    </g>
+                                 </g>
+                              </svg>
+                           </div></span>
+                     </span>
+                  </a>
+               </div>
+            </div>
+            <div class="single-image">
+               <img class="overlay lazy" data-scroll data-scroll-speed="-1"
+                  src="{{project_data.image_2.url}}"
+                  data-src="{{project_data.image_2.url}}" />
+               <img class="overlay overlay-image-top lazy"
+                  data-src="{{project_data.image_3.url}}" />
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+</section>
+
+   {% for mockup in mockups %}
+      {% if mockup.mockup_type == "mac pro studio" %}
+         {% include "mockup/mac_pro_studio.html" %}
+      {% elif mockup.mockup_type == "mac pro" %}
+         {% include "mockup/mac_pro.html" %}
+      {% elif mockup.mockup_type == "iphone 15" %}
+         {% include "mockup/iphone_15.html" %}
+      {% elif mockup.mockup_type == "phone" %}
+         {% include "mockup/phone.html" %}
+      {% elif mockup.mockup_type == "ipad" %}
+         {% include "mockup/ipad.html" %}
+      {% elif mockup.mockup_type == "prototype" %}
+         {% include "mockup/prototype.html" %}
+      {% elif mockup.mockup_type == "phone prototype" %}
+         {% include "mockup/phone_prototype.html" %}
+      {% elif mockup.mockup_type == "big image" %}
+         {% include "mockup/big_image.html" %}
+      {% elif mockup.mockup_type == "big video" %}
+         {% include "mockup/big_video.html" %}
+      {% endif %}
+   {% endfor %}
+
+</section>
+
+
+
+
+<div class="footer-rounded-div" data-scroll-section>
+   <div class="rounded-div-wrap">
+      <div class="rounded-div" style="background-color: {{main_background_color}};"></div>
+   </div>
+</div>
+<div class="footer-wrap footer-case-wrap theme-dark" data-scroll-section>
+   <section class="section footer" data-scroll data-scroll-speed="-4" data-scroll-position="bottom"
+      data-scroll-offset="-25%, 0%">
+      <div class="container medium">
+         <a href="{% url 'project' next_project.name %}" class="row next-case-btn">
+            <div class="flex-col">
+               <p>Next case</p>
+               <h2>{{next_project.name}}</h2>
+            </div>
+            <div class="tile-image-wrap">
+               <div class="tile-image">
+                  <div class="overlay overlay-image lazy" data-scroll data-scroll-speed="2.5"
+                     data-scroll-position="bottom"
+                     style="background-color:#E0D9D1; background-position: center center; background-repeat: no-repeat; background-size: cover;"
+                     data-bg="{{next_project.image.url}}">
+                  </div>
+               </div>
+            </div>
+         </a>
+         <div class="row">
+            <div class="flex-col">
+               <div class="stripe"></div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="flex-col">
+               <div class="btn btn-normal">
+                  <a href="{% url 'work' %}" class="btn-click magnetic" data-strength="25"
+                     data-strength-text="15">
+                     <div class="btn-fill"></div>
+                     <span class="btn-text">
+                        <span class="btn-text-inner change">All work<div class="count-nr">{{project_number}}</div></span>
+                     </span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container no-padding">
+         <div class="row bottom-footer">
+            <div class="flex-col">
+               <div class="credits">
+                  <h5>Version</h5>
+                  <p>{{data.edition}} © Edition</p>
+               </div>
+               <div class="time">
+                  <h5>Local time</h5>
+                  <p><span id="timeSpan">09:41 PM CET</span></p>
+               </div>
+            </div>
+            <div class="flex-col">
+               <div class="socials">
+                  <h5>Socials</h5>
+                  <ul>
+                     <li class="btn btn-link btn-link-external">
+                        <a href="{{data.social_1}}" target="_blank"
+                           class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">{{data.social_1_name}}</span>
+                           </span>
+                        </a>
+                     </li>
+                     <li class="btn btn-link btn-link-external">
+                        <a href="{{data.social_2}}" target="_blank"
+                           class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">{{data.social_2_name}}</span>
+                           </span>
+                        </a>
+                     </li>
+                     <li class="btn btn-link btn-link-external">
+                        <a href="{{data.social_3}}" target="_blank"
+                           class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">{{data.social_3_name}}</span>
+                           </span>
+                        </a>
+                     </li>
+                     <li class="btn btn-link btn-link-external">
+                        <a href="{{data.social_4}}" target="_blank"
+                           class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                           <span class="btn-text">
+                              <span class="btn-text-inner">{{data.social_4_name}}</span>
+                           </span>
+                        </a>
+                     </li>
+                  </ul>
+                  <div class="stripe"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="overlay overlay-gradient"></div>
+</div>
+
+{%endblock%}

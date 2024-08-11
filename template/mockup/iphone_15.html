@@ -1,0 +1,56 @@
+{% load static %}
+<section class="section single-block block-mobile-devices block_1" data-scroll-section
+    style="background-color: {{mockup.background_color}};">
+    <div class="container no-padding block-padding-sides amount-3">
+        <div class="row device-iphone14">
+            <div class="flex-col block-padding-bottom">
+                <div class="device" data-scroll data-scroll-target=".block_1" data-scroll-speed="1">
+                    <div class="single-image">
+
+                        <img class="overlay overlay-image lazy"
+                            src="{{mockup.file_1.url}}"
+                            data-src="{{mockup.file_1.url}}"
+                            width="540" height="1165" />
+                    </div>
+                    <div class="overlay-device-image">
+                        <div class="overlay overlay-device"
+                            style="background: url({% static 'mockup/device-iphone14.png' %}) center center no-repeat; background-size: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-col block-padding-bottom">
+                <div class="device">
+                    <div class="single-image">
+
+                        <img class="overlay overlay-image lazy"
+                            src="{{mockup.file_2.url}}"
+                            data-src="{{mockup.file_2.url}}"
+                            width="540" height="1165" />
+                    </div>
+                    <div class="overlay-device-image">
+                        <div class="overlay overlay-device"
+                            style="background: url({% static 'mockup/device-iphone14.png' %}) center center no-repeat; background-size: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-col block-padding-bottom">
+                <div class="device" data-scroll data-scroll-target=".block_1" data-scroll-speed="-1">
+                    <div class="single-image">
+
+                        <img class="overlay overlay-image lazy"
+                            src="{{mockup.file_3.url}}"
+                            data-src="{{mockup.file_3.url}}"
+                            width="540" height="1165" />
+                    </div>
+                    <div class="overlay-device-image">
+                        <div class="overlay overlay-device"
+                            style="background: url({% static 'mockup/device-iphone14.png' %}) center center no-repeat; background-size: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

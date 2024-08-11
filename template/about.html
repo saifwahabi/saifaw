@@ -1,0 +1,126 @@
+{%extends "base.html"%}
+{% load static %}
+{% block title %} about {%endblock%}
+{% block content %}
+<header class="section default-header about-header" data-scroll-section>
+    {% include "components/navbar.html" %}
+    </div>
+    <div class="container medium once-in">
+        <div class="row">
+            <div class="flex-col">
+                <h1><span>{{data.about_title}} </span><span>{{data.about_title_2}}</span></h1>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="section no-padding line-globe once-in" data-scroll-section>
+    <div class="container medium">
+        <div class="row">
+            <div class="flex-col">
+                <div class="stripe"></div>
+                <div class="digital-ball">
+                    <div class="overlay"></div>
+                    <div class="globe">
+                        <div class="globe-wrap">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle-hor"></div>
+                            <div class="circle-hor-middle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section about-image once-in" data-scroll-section>
+    <div class="bottom-lightgray"></div>
+    <div class="container">
+        <div class="row">
+            <div class="flex-col">
+                <div class="arrow">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>arrow-up-right</title>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Artboard" transform="translate(-1019.000000, -279.000000)" stroke="#FFFFFF"
+                                stroke-width="1.5">
+                                <g id="arrow-up-right"
+                                    transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)">
+                                    <polyline id="Path" points="2.76923077 0 12 0 12 9.23076923"></polyline>
+                                    <line x1="12" y1="0" x2="0" y2="12" id="Path"></line>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <p data-scroll data-scroll-speed="-1" data-scroll-position="top" data-scroll-offset="0%, -50%">{{data.about_1}}</p>
+                <p data-scroll data-scroll-speed="-1" data-scroll-position="top" data-scroll-offset="0%, -50%">
+                    <span style="opacity: .5; display: block; padding-top: .5em;">Always exploring<span
+                            class="animate-dot">.</span><span class="animate-dot">.</span><span
+                            class="animate-dot">.</span></span>
+                </p>
+            </div>
+            <div class="flex-col">
+                <div class="single-about-image">
+                    <div class="overlay overlay-image" data-scroll data-scroll-speed="-2" data-scroll-position="top">
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section about-services" data-scroll-section>
+    <div class="container">
+        <div class="row">
+            <div class="flex-col">
+                <h2>I can help you with <span class="animate-dot">.</span><span class="animate-dot">.</span><span
+                        class="animate-dot">.</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-col">
+                <h5>01</h5>
+                <div class="stripe"></div>
+                <h4>{{data.service_1_title}}</h4>
+                <p>{{data.service_1}}</p>
+            </div>
+            <div class="flex-col">
+                <h5>02</h5>
+                <div class="stripe"></div>
+                <h4>{{data.service_2_title}}</h4>
+                <p>{{data.service_2}}</p>
+            </div>
+            <div class="flex-col">
+                <h5>03</h5>
+                <div class="stripe"></div>
+                <h4>{{data.service_3_title}}</h4>
+                <p>{{data.service_3}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section about-awwwards" data-scroll-section>
+    <div class="container medium">
+        <div class="row">
+            <div class="flex-col">
+                <div class="single-image">
+                    <div class="overlay" data-scroll data-scroll-speed="-1">
+                        <img src="{% static 'img/about_2.jpg' %}">
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="flex-col">
+
+                <h2>{{data.about_2_title}}</h2>
+                <p>{{data.about_2}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "components/footer.html" %}
+{% endblock %}

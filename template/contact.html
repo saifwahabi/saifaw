@@ -1,0 +1,217 @@
+{%extends "base.html"%}
+{% load static %}
+{% block title %} Contact {%endblock%}
+{% block content %}
+<header class="section default-header contact-header theme-dark" data-scroll-section>
+    {% include "components/navbar.html" %}
+    </div>
+    <div class="container medium">
+        <div class="row once-in">
+            <div class="flex-col">
+                <h1><span>
+                        <div class="profile-picture"></div> {{data.contact_title_3}}
+                    </span><span>{{data.contact_title_4}}</span></h1>
+            </div>
+            <div class="flex-col">
+                <div class="profile-picture"></div>
+                <div class="arrow">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>arrow-up-right</title>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Artboard" transform="translate(-1019.000000, -279.000000)" stroke="#FFFFFF"
+                                stroke-width="1.5">
+                                <g id="arrow-up-right"
+                                    transform="translate(1026.000000, 286.000000) rotate(90.000000) translate(-1026.000000, -286.000000) translate(1020.000000, 280.000000)">
+                                    <polyline id="Path" points="2.76923077 0 12 0 12 9.23076923"></polyline>
+                                    <line x1="12" y1="0" x2="0" y2="12" id="Path"></line>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="row once-in">
+            <div class="flex-col">
+                <form class="form" method="post" action="/contact/"
+                    enctype="multipart/form-data" novalidate>
+                    z
+                    <div class="website-field">
+                        <label class="label" for="tel">Phone Number</label>
+                        <input class="field" type="text" id="form-tel" name="tel" tabindex="-1">
+                    </div>
+                    <div class="form-col">
+                        <h5>01</h5>
+                        <label class="label" for="name">What's your name?</label>
+                        <input class="field" type="text" id="form-name" name="name" value="" required
+                            placeholder="John Doe *">
+                    </div>
+                    <div class="form-col">
+                        <h5>02</h5>
+                        <label class="label" for="email">What's your email?</label>
+                        <input class="field" type="email" id="form-email" name="email" value="" required
+                            placeholder="john@doe.com *">
+                    </div>
+                    <div class="form-col">
+                        <h5>03</h5>
+                        <label class="label" for="email">What's the name of your organization?</label>
+                        <input class="field" type="text" id="form-company" name="company" value="" required
+                            placeholder="John & Doe ®">
+                    </div>
+                    <div class="form-col">
+                        <h5>04</h5>
+                        <label class="label" for="email">What services are you looking for?</label>
+                        <input class="field" type="text" id="form-service" name="service" value="" required
+                            placeholder="Mobile Development, Web Development ...">
+                    </div>
+                    <div class="form-col">
+                        <h5>05</h5>
+                        <label class="label" for="message">Your message</label>
+                        <textarea class="field" type="text" id="form-message" name="message" rows="8" required
+                            placeholder="Hello Saif, can you help me with ... *"></textarea>
+                    </div>
+                    <div class="btn-contact-send">
+                        <div class="btn btn-round" data-scroll data-scroll-speed="2" data-scroll-offset="-50%, 0%">
+                            <div class="btn-click magnetic" data-strength="100" data-strength-text="50">
+                                <div class="btn-fill"></div>
+                                <span class="btn-text">
+                                    <input type="submit" name="submit" value="Send it!" class="form-btn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="flex-col">
+                <h5>Contact Details</h5>
+                <ul class="links-wrap">
+                    <li class="btn btn-link btn-link-external">
+                        <a href="mailto:{{data.email}}" class="btn-click magnetic" data-strength="20"
+                            data-strength-text="10">
+                            <span class="btn-text">
+                                <span class="btn-text-inner">{{data.email}}</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="btn btn-link btn-link-external">
+                        <a href="tel:{{data.phone_number}}" class="btn-click magnetic" data-strength="20"
+                            data-strength-text="10">
+                            <span class="btn-text">
+                                <span class="btn-text-inner">{{data.phone_number}}</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <h5>Business Details</h5>
+                <ul class="links-wrap">
+                    <li>
+                        <p>{{data.business_data_1}}</p>
+                    </li>
+                    <li>
+                        <p>{{data.business_data_2}}</p>
+                    </li>
+                    <li>
+                        <p>{{data.business_data_3}}</p>
+                    </li>
+                    <li>
+                        <p>Location: {{data.location}}</p>
+                    </li>
+                </ul>
+                <h5>Socials</h5>
+                <ul class="links-wrap">
+                    <li class="btn btn-link btn-link-external">
+                        <a href="{{data.social_1}}" target="_blank" class="btn-click magnetic"
+                            data-strength="20" data-strength-text="10">
+                            <span class="btn-text">
+                                <span class="btn-text-inner">{{data.social_1_name}}</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="btn btn-link btn-link-external">
+                        <a href="{{data.social_2}}" target="_blank" class="btn-click magnetic"
+                            data-strength="20" data-strength-text="10">
+                            <span class="btn-text">
+                                <span class="btn-text-inner">{{data.social_2_name}}</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="btn btn-link btn-link-external">
+                        <a href="{{data.social_3}}" target="_blank" class="btn-click magnetic"
+                            data-strength="20" data-strength-text="10">
+                            <span class="btn-text">
+                                <span class="btn-text-inner">{{data.social_3_name}}</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="btn btn-link btn-link-external">
+                        <a href="{{data.social_4}}" target="_blank"
+                            class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                            <span class="btn-text">
+                                <span class="btn-text-inner">{{data.social_4_name}}</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<footer class="section footer footer-contact theme-dark" data-scroll-section>
+    <div class="container no-padding">
+        <div class="row bottom-footer">
+            <div class="flex-col">
+                <div class="credits">
+                    <h5>Version</h5>
+                    <p>{{data.edition}} © Edition</p>
+                </div>
+                <div class="time">
+                    <h5>Local time</h5>
+                    <p><span id="timeSpan">09:41 PM CET</span></p>
+                </div>
+            </div>
+            <div class="flex-col">
+                <div class="socials">
+                    <h5>Socials</h5>
+                    <ul>
+                        <li class="btn btn-link btn-link-external">
+                            <a href="{{data.social_1}}" target="_blank"
+                                class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">{{data.social_1_name}}</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="btn btn-link btn-link-external">
+                            <a href="{{data.social_2}}" target="_blank" class="btn-click magnetic"
+                                data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">{{data.social_2_name}}</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="btn btn-link btn-link-external">
+                            <a href="{{data.social_3}}" target="_blank" class="btn-click magnetic"
+                                data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">{{data.social_3_name}}</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="btn btn-link btn-link-external">
+                            <a href="{{data.social_4}}" target="_blank"
+                                class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <span class="btn-text">
+                                    <span class="btn-text-inner">{{data.social_4_name}}</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="stripe"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{%endblock%}
