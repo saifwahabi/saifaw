@@ -30,11 +30,11 @@
     <link rel="preload" as="font" href="https://dennissnellenberg.com/assets/fonts/NeueMontreal-Regular.otf"
         type="font/otf" crossorigin="anonymous">
     <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/x-icon">
-    <link href="https://github.com/saifwahabi/saifaw/tree/main/static/css/normalize.css" rel="stylesheet">
-    <link href="https://github.com/saifwahabi/saifaw/tree/main/static/css/locomotive-scroll.css" rel="stylesheet">
-    <link href="https://github.com/saifwahabi/saifaw/tree/main/static/css/styleguide.css" rel="stylesheet">
-    <link href="https://github.com/saifwahabi/saifaw/tree/main/static/css/components.css" rel="stylesheet">
-    <link href="https://github.com/saifwahabi/saifaw/tree/main/static/css/style-new.css" rel="stylesheet">
+    <link href="{% static 'css/normalize.css' %}" rel="stylesheet">
+    <link href="{% static 'css/locomotive-scroll.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styleguide.css' %}" rel="stylesheet">
+    <link href="{% static 'css/components.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style-new.css' %}" rel="stylesheet">
 </head>
 
 <body data-barba="wrapper">
@@ -246,7 +246,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
 
     <script src="https://dennissnellenberg.com/assets/js/locomotive-scroll.min.js"></script>
-    <script defer src="https://github.com/saifwahabi/saifaw/tree/main/static/js/index-new.js"></script>
+    <script defer src="{% static 'js/index-new.js' %}"></script>
 </body>
 
 </html> 
