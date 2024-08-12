@@ -10,10 +10,4 @@
             "dest": "portfolio/wsgi.py"
         }
     ],
-    "static": [
-    {
-      "src": "/static/**",
-      "dest": "/static/"
-    }
-  ]
 }
