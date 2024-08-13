@@ -55,6 +55,9 @@ MIDDLEWARE = [
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
+CSRF_TRUSTED_ORIGINS = ['*.vercel.app']
+
+
 ROOT_URLCONF = 'portfolio.urls'
 
 TEMPLATES = [
