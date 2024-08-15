@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "whitenoise.runserver_nostatic",
+    'cloudinary',
+    'cloudinary_storage',
     'page'
 ]
 
@@ -131,11 +133,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/'
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dprqwjd86',
+    'API_KEY': '612638829491758',
+    'API_SECRET': 'wtUOh86tZodx1M1MV1VGmjb_nsE',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+MEDIA_URL = 'https://res.cloudinary.com/dprqwjd86/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
