@@ -140,7 +140,7 @@ CLOUDINARY_STORAGE = {
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-MEDIA_URL = 'https://res.cloudinary.com/dprqwjd86/'
+MEDIA_URL = 'https://res.cloudinary.com/612638829491758:wtUOh86tZodx1M1MV1VGmjb_nsE@dprqwjd86'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
