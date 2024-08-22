@@ -132,7 +132,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 #MEDIA_URL = '/media/'
 
-MEDIA_URL = 'https://github.com/saifwahabi/saifaw_media/blob/main/'
+MEDIA_URL = 'https://raw.githubusercontent.com/saifwahabi/saifaw_media/main/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
