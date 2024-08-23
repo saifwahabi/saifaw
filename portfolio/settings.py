@@ -130,7 +130,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-#MEDIA_URL = '/media/'
 
 MEDIA_URL = 'https://raw.githubusercontent.com/saifwahabi/saifaw_media/main/'
 
